@@ -21,5 +21,9 @@
   "bugs": {
     "url": "https://github.com/miladsade96/dev_academy/issues"
   },
-  "homepage": "https://github.com/miladsade96/dev_academy#readme"
+  "homepage": "https://github.com/miladsade96/dev_academy#readme",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "prettier": "^3.2.5"
+  }
 }
