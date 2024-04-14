@@ -3,6 +3,9 @@ const { titleCaseV1, titleCaseV2, titleCaseV3 } = functions;
 
 describe("titleCaseV1 function tests", () => {
   it.each([
+    { str: "", expected: "" },
+    { str: " ", expected: " " },
+    { str: "j", expected: "J" },
     { str: "helLo wORld", expected: "Hello World" },
     { str: "mIlAd sADEghI", expected: "Milad Sadeghi" },
     { str: "wE geT wHaT wE dEsErVe", expected: "We Get What We Deserve" },
@@ -13,6 +16,9 @@ describe("titleCaseV1 function tests", () => {
 
 describe("titleCaseV2 function tests", () => {
   it.each([
+    { str: "", expected: "" },
+    { str: " ", expected: " " },
+    { str: "s", expected: "S" },
     { str: "heLLo wORld", expected: "Hello World" },
     { str: "mIlAd sADeGhI", expected: "Milad Sadeghi" },
     { str: "wE gET wHAT wE dEsErVe", expected: "We Get What We Deserve" },
@@ -23,6 +29,9 @@ describe("titleCaseV2 function tests", () => {
 
 describe("titleCaseV3 function tests", () => {
   it.each([
+    { str: "", expected: "" },
+    { str: " ", expected: " " },
+    { str: "M", expected: "M" },
     { str: "helLo wORLD", expected: "Hello World" },
     { str: "mILAD sADEghI", expected: "Milad Sadeghi" },
     { str: "wE gEt wHAt WE dEsErVE", expected: "We Get What We Deserve" },
