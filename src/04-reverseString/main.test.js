@@ -1,5 +1,5 @@
 const functions = require("./main");
-const { reverseStringV1, reverseStringV2 } = functions;
+const { reverseStringV1, reverseStringV2, reverseStringV3 } = functions;
 
 describe("reverseString function tests", () => {
   it.each([
@@ -20,5 +20,15 @@ describe("reverseString function tests", () => {
     { str: "Data Structures", expected: "serutcurtS ataD" },
   ])("reverseStringV2($str) equals to $expected", ({ str, expected }) => {
     expect(reverseStringV2(str)).toBe(expected);
+  });
+
+  it.each([
+    { str: "", expected: "" },
+    { str: "S", expected: "S" },
+    { str: "TypeScript", expected: "tpircSepyT" },
+    { str: "Algorithms", expected: "smhtiroglA" },
+    { str: "Data Structures", expected: "serutcurtS ataD" },
+  ])("reverseStringV3($str) equals to $expected", ({ str, expected }) => {
+    expect(reverseStringV3(str)).toBe(expected);
   });
 });
