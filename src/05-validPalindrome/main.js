@@ -105,3 +105,29 @@ function isAlphanumericV3(char) {
     (code >= 97 && code <= 122) // a - z
   );
 }
+
+function isPalindromeV2(str) {
+  /*
+   * Solution #2 - Using iteration over given string from forward and backward at the same time.
+   * By the way, you can either use isAlphanumericV1, isAlphanumericV2, isAlphanumericV3 helper functions.
+   * Time complexity: O(n)
+   * Space Complexity: O(1)
+   */
+  let start = 0;
+  let end = str.length - 1;
+  while (start < end) {
+    if (!isAlphanumericV3(str[start])) {
+      start++;
+    } else if (!isAlphanumericV3(str[end])) {
+      end--;
+    } else if (str[start].toLowerCase() !== str[end].toLowerCase()) {
+      return false;
+    } else {
+      start++;
+      end--;
+    }
+  }
+  return true;
+}
+
+module.exports = { isPalindromeV1, isPalindromeV2 };
