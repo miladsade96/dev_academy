@@ -25,8 +25,14 @@ function intersectionV3(arr1, arr2) {
   const set2 = new Set(arr2);
   const intersectionArr = [];
 
-  for (const element of set1) {
-    if (set2.has(element)) intersectionArr.push(element);
+  if (set1.size <= set2.size) {
+    for (const element of set1) {
+      if (set2.has(element)) intersectionArr.push(element);
+    }
+  } else {
+    for (const element of set2) {
+      if (set1.has(element)) intersectionArr.push(element);
+    }
   }
 
   return intersectionArr;
