@@ -17,7 +17,7 @@ function intersectionV1(arr1, arr2) {
 function intersectionV2(arr1, arr2) {
   const uniqueArr1 = [...new Set(arr1)];
   const set2 = new Set(arr2);
-  return [...new Set(uniqueArr1.filter((el) => set2.has(el)))];
+  return uniqueArr1.filter((el) => set2.has(el));
 }
 
 module.exports = { intersectionV1, intersectionV2 };
