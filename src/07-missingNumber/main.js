@@ -17,3 +17,29 @@ function findMissingNumberV1(arr) {
   }
 }
 
+function findMissingNumberV2(arr) {
+  /*
+   * Approach #2: Using Iteration Over Sorted Array
+   *
+   * Time Complexity: O(n)
+   * Space Complexity; O(n)
+   */
+
+  if (arr.length === 1) {
+    if (arr[0] === 0) return 1;
+    else if (arr[0] === 1) return 0;
+  }
+  const sortedArr = arr.sort((a, b) => a - b);
+  let counter = 0;
+  for (const element of sortedArr) {
+    if (element !== counter) return counter;
+    else {
+      counter++;
+    }
+  }
+  return counter++;
+}
+
+findMissingNumberV2([3, 0, 1]);
+
+module.exports = { findMissingNumberV1, findMissingNumberV2 };
