@@ -31,6 +31,4 @@ function findMissingNumberV2(arr) {
   return counter++;
 }
 
-findMissingNumberV2([3, 0, 1]);
-
 module.exports = { findMissingNumberV1, findMissingNumberV2 };
