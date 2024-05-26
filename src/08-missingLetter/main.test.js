@@ -9,6 +9,7 @@ describe("findMissingLetter function tests", () => {
     { arrOfChars: ["a", "b", "c"], expected: "" },
     { arrOfChars: ["A", "B", "C", "E"], expected: "D" },
     { arrOfChars: ["A", "B", "C", "D", "E", "F", "G"], expected: "" },
+    { arrOfChars: ["C", "D", "E", "G"], expected: "F" },
   ])(
     "findMissingLetterV1($arrOfChars) is equal to: $expected",
     ({ arrOfChars, expected }) => {
@@ -23,6 +24,7 @@ describe("findMissingLetter function tests", () => {
     { arrOfChars: ["a", "b", "c"], expected: "" },
     { arrOfChars: ["A", "B", "C", "E"], expected: "D" },
     { arrOfChars: ["A", "B", "C", "D", "E", "F", "G"], expected: "" },
+    { arrOfChars: ["C", "D", "E", "G"], expected: "F" },
   ])(
     "findMissingLetterV2($arrOfChars) is equal to: $expected",
     ({ arrOfChars, expected }) => {
