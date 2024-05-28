@@ -37,3 +37,17 @@ function findMissingLetterV2(arrOfChars) {
 }
 
 module.exports = { findMissingLetterV1, findMissingLetterV2 };
+function findMissingLetterV3(arrOfChars) {
+  if (arrOfChars.length === 0) return "";
+  let start = arrOfChars[0].charCodeAt(0);
+  const missingCharCode = arrOfChars
+    .slice(1)
+    .map((char) => char.charCodeAt(0))
+    .find((current) => {
+      if (current - start > 1) return true;
+      start = current;
+      return false;
+    });
+  return missingCharCode ? String.fromCharCode(missingCharCode - 1) : "";
+}
+
