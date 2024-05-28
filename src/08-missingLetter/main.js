@@ -36,7 +36,6 @@ function findMissingLetterV2(arrOfChars) {
   return "";
 }
 
-module.exports = { findMissingLetterV1, findMissingLetterV2 };
 function findMissingLetterV3(arrOfChars) {
   if (arrOfChars.length === 0) return "";
   let start = arrOfChars[0].charCodeAt(0);
@@ -64,3 +63,22 @@ function findMissingLetterV4(arrOfChars) {
     : "";
 }
 
+function findMissingLetterV5(arrOfChars) {
+  if (arrOfChars.length === 0) return "";
+  let start = arrOfChars[0].charCodeAt(0);
+  const missingCharCode = arrOfChars.reduce((missing, char) => {
+    const current = char.charCodeAt(0);
+    if (current - start > 1 && missing === null) missing = start + 1;
+    start = current;
+    return missing;
+  }, null);
+  return missingCharCode ? String.fromCharCode(missingCharCode) : "";
+}
+
+module.exports = {
+  findMissingLetterV1,
+  findMissingLetterV2,
+  findMissingLetterV3,
+  findMissingLetterV4,
+  findMissingLetterV5,
+};
