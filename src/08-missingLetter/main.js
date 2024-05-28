@@ -51,3 +51,16 @@ function findMissingLetterV3(arrOfChars) {
   return missingCharCode ? String.fromCharCode(missingCharCode - 1) : "";
 }
 
+function findMissingLetterV4(arrOfChars) {
+  const missingCharCode = arrOfChars.filter((char, index) => {
+    if (index === 0) return false;
+    const prevCharCode = arrOfChars[index - 1].charCodeAt(0);
+    const currentCharCode = char.charCodeAt(0);
+    return currentCharCode - prevCharCode > 1;
+  })[0];
+
+  return missingCharCode
+    ? String.fromCharCode(missingCharCode.charCodeAt(0) - 1)
+    : "";
+}
+
