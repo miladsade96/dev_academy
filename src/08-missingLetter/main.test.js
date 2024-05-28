@@ -1,5 +1,11 @@
 const functions = require("./main");
-const { findMissingLetterV1, findMissingLetterV2 } = functions;
+const {
+  findMissingLetterV1,
+  findMissingLetterV2,
+  findMissingLetterV3,
+  findMissingLetterV4,
+  findMissingLetterV5,
+} = functions;
 
 describe("findMissingLetter function tests", () => {
   it.each([
