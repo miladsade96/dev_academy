@@ -20,7 +20,20 @@ function reverseStringV2(str) {
   return str.split("").reverse().join("");
 }
 
+function reverseStringV3(str) {
+  /* Solution #3 - Using recursion:
+   *
+   * Time complexity: O(n)
+   * Space complexity: O(n)
+   */
+  if (str === "") {
+    return "";
+  }
+  return reverseStringV3(str.substring(1)) + str.charAt(0);
+}
+
 module.exports = {
   reverseStringV1,
   reverseStringV2,
+  reverseStringV3,
 };
