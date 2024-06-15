@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Dev Academy Related Stuff",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "vitest",
     "test:ui": "vitest --ui",
