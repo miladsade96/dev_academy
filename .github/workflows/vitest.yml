@@ -23,5 +23,5 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run Jest tests
+      - name: Running Tests by Vitest
         run: npm test
