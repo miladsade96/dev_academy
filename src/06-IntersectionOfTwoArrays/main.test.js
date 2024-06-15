@@ -1,5 +1,5 @@
-const functions = require("./main");
-const { intersectionV1, intersectionV2, intersectionV3 } = functions;
+import { describe, it, expect } from "vitest";
+import { intersectionV1, intersectionV2, intersectionV3 } from "./main";
 
 describe("intersectionOfTwoArrays function tests", () => {
   it.each([

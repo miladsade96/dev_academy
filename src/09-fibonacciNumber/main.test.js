@@ -1,5 +1,5 @@
-const functions = require("./main");
-const { fibonacciNumberV1, fibonacciNumberV2 } = functions;
+import { describe, it, expect } from "vitest";
+import { fibonacciNumberV1, fibonacciNumberV2 } from "./main";
 
 describe("fibonacciNumber", () => {
   it.each([

@@ -1,4 +1,4 @@
-function isPalindromeV1(str) {
+export function isPalindromeV1(str) {
   /*
    * Solution #1 - Using Arrays:
    * Time complexity: O(n)
@@ -10,7 +10,7 @@ function isPalindromeV1(str) {
 
 //----------------------------------------------------------------------------------------------------------------------
 
-function isAlphanumericV1(char) {
+export function isAlphanumericV1(char) {
   /*
    * This is the helper function #1 - powered by regex
    * Time complexity: O(1)
@@ -19,7 +19,7 @@ function isAlphanumericV1(char) {
   return /^[a-z0-9]$/i.test(char);
 }
 
-function isAlphanumericV2(char) {
+export function isAlphanumericV2(char) {
   /*
    * This is the helper function #2 - powered by hash tables
    * Time complexity: Lookup in hash tables is O(1) and O(n) when collision is occurred
@@ -92,7 +92,7 @@ function isAlphanumericV2(char) {
   return alphaNumericObj[char] || false;
 }
 
-function isAlphanumericV3(char) {
+export function isAlphanumericV3(char) {
   /*
    * This is the helper function #3 - powered by ASCII table codes
    * Time complexity: O(1)
@@ -106,7 +106,7 @@ function isAlphanumericV3(char) {
   );
 }
 
-function isPalindromeV2(str) {
+export function isPalindromeV2(str) {
   /*
    * Solution #2 - Using iteration over given string from forward and backward at the same time.
    * By the way, you can either use isAlphanumericV1, isAlphanumericV2, isAlphanumericV3 helper functions.
@@ -129,5 +129,3 @@ function isPalindromeV2(str) {
   }
   return true;
 }
-
-module.exports = { isPalindromeV1, isPalindromeV2 };

@@ -1,10 +1,10 @@
-function findMaxNumberV1(arrOfNums) {
+export function findMaxNumberV1(arrOfNums) {
   // Using built-in methods:
   const noDuplicates = [...new Set(arrOfNums)];
   return Math.max(...noDuplicates);
 }
 
-function findMaxNumberV2(arrOfNums) {
+export function findMaxNumberV2(arrOfNums) {
   // Using for loop - original:
   let maxNum = arrOfNums[0];
   for (let i = 1; i < arrOfNums.length; i++) {
@@ -13,7 +13,7 @@ function findMaxNumberV2(arrOfNums) {
   return maxNum;
 }
 
-function findMaxNumberV3(arrOfNums) {
+export function findMaxNumberV3(arrOfNums) {
   // Using for loop and -infinity:
   let maxNum = Number.NEGATIVE_INFINITY;
   for (const element of arrOfNums) {
@@ -23,9 +23,3 @@ function findMaxNumberV3(arrOfNums) {
   }
   return maxNum;
 }
-
-module.exports = {
-  findMaxNumberV1,
-  findMaxNumberV2,
-  findMaxNumberV3,
-};

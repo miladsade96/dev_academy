@@ -1,5 +1,5 @@
-const functions = require("./main");
-const { findMissingNumberV1, findMissingNumberV2 } = functions;
+import { describe, expect, it } from "vitest";
+import { findMissingNumberV1, findMissingNumberV2 } from "./main";
 
 describe("findMissingNumber function tests", () => {
   it.each([

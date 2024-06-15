@@ -1,5 +1,5 @@
-const functions = require("./main");
-const { reverseStringV1, reverseStringV2, reverseStringV3 } = functions;
+import { describe, expect, it } from "vitest";
+import { reverseStringV1, reverseStringV2, reverseStringV3 } from "./main";
 
 describe("reverseString function tests", () => {
   it.each([

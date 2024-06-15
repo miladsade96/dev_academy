@@ -1,5 +1,5 @@
-const functions = require("./main");
-const { findMaxNumberV1, findMaxNumberV2, findMaxNumberV3 } = functions;
+import { describe, it, expect } from "vitest";
+import { findMaxNumberV1, findMaxNumberV2, findMaxNumberV3 } from "./main";
 
 const massiveArray = Array.from({ length: 1000000 }, () => 10);
 

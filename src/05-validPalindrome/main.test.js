@@ -1,5 +1,5 @@
-const functions = require("./main");
-const { isPalindromeV1, isPalindromeV2 } = functions;
+import { describe, expect, it } from "vitest";
+import { isPalindromeV1, isPalindromeV2 } from "./main";
 
 describe("isPalindrome function tests", () => {
   it.each([

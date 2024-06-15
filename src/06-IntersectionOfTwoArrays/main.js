@@ -1,4 +1,4 @@
-function intersectionV1(arr1, arr2) {
+export function intersectionV1(arr1, arr2) {
   /*
    * Approach #1: Comparing two unique arrays
    *
@@ -21,7 +21,7 @@ function intersectionV1(arr1, arr2) {
   return intersectionArr;
 }
 
-function intersectionV2(arr1, arr2) {
+export function intersectionV2(arr1, arr2) {
   /*
    * Approach #2 - Solution #1: Comparing a unique array to a set
    *
@@ -34,7 +34,7 @@ function intersectionV2(arr1, arr2) {
   return uniqueArr1.filter((el) => set2.has(el));
 }
 
-function intersectionV3(arr1, arr2) {
+export function intersectionV3(arr1, arr2) {
   /*
    * Approach #2 - Solution #2: Comparing two sets
    *
@@ -58,5 +58,3 @@ function intersectionV3(arr1, arr2) {
 
   return intersectionArr;
 }
-
-module.exports = { intersectionV1, intersectionV2, intersectionV3 };

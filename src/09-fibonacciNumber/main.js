@@ -1,4 +1,4 @@
-function fibonacciNumberV1(number) {
+export function fibonacciNumberV1(number) {
   /* Solution #1 - Using recursion:
    *
    * Time complexity: O(2^n)
@@ -10,7 +10,7 @@ function fibonacciNumberV1(number) {
   return fibonacciNumberV1(number - 1) + fibonacciNumberV1(number - 2);
 }
 
-function fibonacciNumberV2(number) {
+export function fibonacciNumberV2(number) {
   /* Solution #2 - Using for loop:
    *
    * Time complexity: O(n)
@@ -31,5 +31,3 @@ function fibonacciNumberV2(number) {
   }
   return next;
 }
-
-module.exports = { fibonacciNumberV1, fibonacciNumberV2 };

@@ -1,11 +1,11 @@
-const functions = require("./main");
-const {
+import { describe, expect, it } from "vitest";
+import {
   findMissingLetterV1,
   findMissingLetterV2,
   findMissingLetterV3,
   findMissingLetterV4,
   findMissingLetterV5,
-} = functions;
+} from "./main";
 
 describe("findMissingLetter function tests", () => {
   it.each([

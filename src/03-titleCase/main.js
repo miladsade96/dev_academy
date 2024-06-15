@@ -1,4 +1,4 @@
-function titleCaseV1(str) {
+export function titleCaseV1(str) {
   /* Solution #1 - Using for loop
    *
    * Time complexity: O(n)
@@ -11,7 +11,7 @@ function titleCaseV1(str) {
   return words.join(" ");
 }
 
-function titleCaseV2(str) {
+export function titleCaseV2(str) {
   /* Solution #2 - Using map method
    *
    * Time complexity: O(n)
@@ -24,7 +24,7 @@ function titleCaseV2(str) {
     .join(" ");
 }
 
-function titleCaseV3(str) {
+export function titleCaseV3(str) {
   /* Solution #3 - using regex
    *
    * Time complexity: ?
@@ -34,9 +34,3 @@ function titleCaseV3(str) {
    */
   return str.toLowerCase().replace(/\b\w/g, (match) => match.toUpperCase());
 }
-
-module.exports = {
-  titleCaseV1,
-  titleCaseV2,
-  titleCaseV3,
-};

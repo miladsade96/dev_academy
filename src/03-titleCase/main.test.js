@@ -1,5 +1,5 @@
-const functions = require("./main");
-const { titleCaseV1, titleCaseV2, titleCaseV3 } = functions;
+import { describe, expect, it } from "vitest";
+import { titleCaseV1, titleCaseV2, titleCaseV3 } from "./main";
 
 describe("titleCaseV1 function tests", () => {
   it.each([

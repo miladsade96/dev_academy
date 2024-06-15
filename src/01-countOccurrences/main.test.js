@@ -1,6 +1,9 @@
-const functions = require("./main");
-const { countOccurrencesV1, countOccurrencesV2, countOccurrencesV3 } =
-  functions;
+import { describe, it, expect } from "vitest";
+import {
+  countOccurrencesV1,
+  countOccurrencesV2,
+  countOccurrencesV3,
+} from "./main";
 
 describe("countOccurrences functions tests", () => {
   it.each([

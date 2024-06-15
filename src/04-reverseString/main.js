@@ -1,4 +1,4 @@
-function reverseStringV1(str) {
+export function reverseStringV1(str) {
   /* Solution #1 - Using for loop:
    *
    * Time complexity: O(n)
@@ -11,7 +11,7 @@ function reverseStringV1(str) {
   return reversedStr;
 }
 
-function reverseStringV2(str) {
+export function reverseStringV2(str) {
   /* Solution #2 - Using array:
    *
    * Time complexity: O(n)
@@ -20,7 +20,7 @@ function reverseStringV2(str) {
   return str.split("").reverse().join("");
 }
 
-function reverseStringV3(str) {
+export function reverseStringV3(str) {
   /* Solution #3 - Using recursion:
    *
    * Time complexity: O(n)
@@ -31,9 +31,3 @@ function reverseStringV3(str) {
   }
   return reverseStringV3(str.substring(1)) + str.charAt(0);
 }
-
-module.exports = {
-  reverseStringV1,
-  reverseStringV2,
-  reverseStringV3,
-};

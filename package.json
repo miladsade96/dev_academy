@@ -4,7 +4,9 @@
   "description": "Dev Academy Related Stuff",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "coverage": "vitest run --coverage"
   },
   "repository": {
     "type": "git",
@@ -22,7 +24,9 @@
   },
   "homepage": "https://github.com/miladsade96/dev_academy#readme",
   "devDependencies": {
-    "jest": "^29.7.0",
-    "prettier": "^3.2.5"
+    "@vitest/coverage-istanbul": "^1.6.0",
+    "@vitest/ui": "^1.6.0",
+    "prettier": "^3.2.5",
+    "vitest": "^1.6.0"
   }
 }

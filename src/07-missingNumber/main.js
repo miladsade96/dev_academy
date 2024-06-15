@@ -1,4 +1,4 @@
-function findMissingNumberV1(arr) {
+export function findMissingNumberV1(arr) {
   /*
    * Approach #1: Using Gauss Summation Formula
    *
@@ -12,7 +12,7 @@ function findMissingNumberV1(arr) {
   return expectedSum - actualSum;
 }
 
-function findMissingNumberV2(arr) {
+export function findMissingNumberV2(arr) {
   /*
    * Approach #2: Using Iteration Over Sorted Array
    *
@@ -30,5 +30,3 @@ function findMissingNumberV2(arr) {
   }
   return counter;
 }
-
-module.exports = { findMissingNumberV1, findMissingNumberV2 };
