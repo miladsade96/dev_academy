@@ -1,4 +1,10 @@
 export function groupAnagramsV1(strs) {
+  /*
+   *  Approach #1: Using object
+   *
+   *  Time Complexity: O(n * m * log(m))
+   *  Space Complexity: O(n * m)
+   */
   const storage = {};
   for (const word of strs) {
     const sortedChars = word.split("").sort().join("");
@@ -9,6 +15,12 @@ export function groupAnagramsV1(strs) {
 }
 
 export function groupAnagramsV2(strs) {
+  /*
+   *  Approach #2: Using Map
+   *
+   *  Time Complexity: O(n * m * log(m))
+   *  Space Complexity: O(n * m)
+   */
   const storage = new Map();
   for (const word of strs) {
     const sortedChars = word.split("").sort().join("");
